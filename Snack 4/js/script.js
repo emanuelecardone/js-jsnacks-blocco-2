@@ -9,8 +9,13 @@ const numbersArray = [];
 let somma = 0;
 while(somma < 50){
     const currentNumber = parseInt(prompt(`Dammi un numero`));
-    numbersArray.push(currentNumber);
-    somma += currentNumber;
+
+    if(!isNaN(currentNumber)){
+        numbersArray.push(currentNumber);
+        somma += currentNumber;
+    } else{
+        alert(`Non hai inserito alcun numero`);
+    }
 }
 
 console.log(numbersArray);
