@@ -3,8 +3,8 @@ const lastNamesList = ['Totti', 'Aguero', 'Messi', 'Ronaldo', 'Toni'];
 const fakeList = [];
 
 for( let i = 0; i < firstNamesList.length; i++){
-    const currentFirstName = firstNamesList[Math.floor(Math.random() * (firstNamesList.length - 1) + 1) + 0];
-    const currentLastName = lastNamesList[Math.floor(Math.random() * (lastNamesList.length - 1) + 1) + 0];
+    const currentFirstName = firstNamesList[Math.floor(Math.random() * (firstNamesList.length - 1 + 1)) + 0];
+    const currentLastName = lastNamesList[Math.floor(Math.random() * (lastNamesList.length - 1 + 1)) + 0];
 
     fakeList.push(currentFirstName + currentLastName);
 }
