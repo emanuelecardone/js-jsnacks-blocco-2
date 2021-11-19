@@ -10,15 +10,41 @@
 // METODO COL FOR
 let forSum = 0;
 for(let i = 0; i < 5; i++){
-    forSum += parseInt(prompt(`Dimmi un numero (somma con il for)`));
+    const currentNumber = prompt(`Dimmi un numero (somma con il for)`);
+    if(!(currentNumber === '') && !(currentNumber === null)){
+        forSum += parseInt(currentNumber);
+    } else if(currentNumber === ''){
+        alert(`Per favore inserisci un numero valido`);
+        i--;
+    } else{
+        alert('Hai annullato l\'operazione');
+        break;
+    }
+    // Output solo se ho 5 numeri inseriti così da evitarlo all'annulla dell'utente
+    if(i === 4){
+        alert(`Somma For: ${forSum}`);
+    }
 }
+
+
 
 // METODO COL WHILE
 let whileSum = 0;
 let i = 0;
 while(i < 5){
-    whileSum += parseInt(prompt(`Dimmi un numero (somma con il while)`));
+    const currentNumber = prompt(`Dimmi un numero (somma con il while)`);
+    if(!(currentNumber === '') && !(currentNumber === null)){
+        whileSum += parseInt(currentNumber);
+    } else if(currentNumber === ''){
+        alert(`Per favore inserisci un numero valido`);
+        i--;
+    } else{
+        alert('Hai annullato l\'operazione');
+        break;
+    }
+    // Output solo se ho 5 numeri inseriti così da evitarlo all'annulla dell'utente
+    if(i === 4){
+        alert(`Somma While: ${whileSum}`);
+    }
     i++;
 }
-
-alert(`Somma For: ${forSum} | Somma While: ${whileSum}`);
