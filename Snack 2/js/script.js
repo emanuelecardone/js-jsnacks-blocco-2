@@ -1,0 +1,12 @@
+const firstNamesList = ['Martina ', 'Emanuele ', 'Matteo ', 'Francesca ', 'Alex '];
+const lastNamesList = ['Totti', 'Aguero', 'Messi', 'Ronaldo', 'Toni'];
+const fakeList = [];
+
+for( let i = 0; i < firstNamesList.length; i++){
+    const currentFirstName = firstNamesList[Math.floor(Math.random() * 4) + 0];
+    const currentLastName = lastNamesList[Math.floor(Math.random() * 4) + 0];
+
+    fakeList.push(currentFirstName + currentLastName);
+}
+
+console.log(fakeList);
