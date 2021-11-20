@@ -13,7 +13,7 @@ const mainTitle = `
     <span class="fs-4">Puoi inserire un massimo di 10 numeri</span>
 </h1>`;
 const formArea = `
-<div class="form_wrapper w-25 h-25 bg-light p-5 d-flex flex-column justify-content-center align-items-start rounded-pill">
+<div class="form_wrapper h-25 bg-light p-5 d-flex flex-column justify-content-center align-items-start rounded-pill">
     <label for="number_form" class="form-label text-primary">Inserisci qui un numero</label>
     <input type="number" class="form-control mb-3 number_input" id="number_form">
     <button type="submit" class="btn btn-primary form_button">Invia</button>
@@ -22,7 +22,7 @@ const formArea = `
 const listArea = `
 <div class="list_wrapper w-50 h_15 bg-light d-flex justify-content-around align-items-center rounded">
     <div class="container-fluid">
-        <div class="row row-cols-10">
+        <div class="row row-cols-5 row-cols-lg-10">
 
         </div>
     </div>
@@ -55,7 +55,7 @@ numbersButton.addEventListener('click', function(){
     if(numbersArray.length < 10 && !isNaN(currentNumber)){
         
         // Variabile per la row della lista in pagina
-        const numbersListRow = document.querySelector('.row-cols-10');
+        const numbersListRow = document.querySelector('.row');
 
         // Inserisco il numero sia nell'array che nella lista in pagina
         numbersArray.push(currentNumber);
