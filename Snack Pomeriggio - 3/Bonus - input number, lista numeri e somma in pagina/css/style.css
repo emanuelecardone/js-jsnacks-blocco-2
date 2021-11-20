@@ -1,0 +1,10 @@
+main{
+    gap: 5rem;
+}
+.row-cols-10 > .col{
+    flex: 0 0 auto;
+    width: 10%;
+}
+.btn:focus{
+    box-shadow: none;
+}
