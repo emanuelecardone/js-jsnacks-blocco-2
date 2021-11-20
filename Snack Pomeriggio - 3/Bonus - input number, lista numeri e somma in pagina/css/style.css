@@ -1,13 +1,17 @@
+/* COMMON */
 main{
     gap: 5rem;
 }
 .btn:focus{
     box-shadow: none;
 }
+
+/* Wrapper dell'input */
 .form_wrapper{
     width: 50%;
 }
 
+/* MEDIA */
 @media screen and (min-width: 992px){
     .row-cols-lg-10 > .col{
         flex: 0 0 auto;

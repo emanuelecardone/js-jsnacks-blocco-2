@@ -87,5 +87,4 @@ numbersButton.addEventListener('click', function(){
 
     // Svuoto l'area di input ad ogni click di invio
     numbersInput.value = '';
-    
 });
