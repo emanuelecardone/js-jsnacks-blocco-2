@@ -37,6 +37,8 @@ submitButton.addEventListener('click', function(){
         doubleOutput = false;
     }
 
+    // Eseguo questo if separatamente dal blocco sopraaltrimenti uno sovrascrivrebbe l'altro 
+    // in qualsiasi ordine li mettessi
     if(numbersList.length === 5){
         // METODO COL FOR
         let forSum = 0;
@@ -52,6 +54,7 @@ submitButton.addEventListener('click', function(){
             whileSum += currentNumber;
             i++;
         }
+        // Output finale mostrato solo 1 volta grazie alla flag
         if(doubleOutput){
             alert(`Metodo For: ${forSum} | Metodo While: ${whileSum}`);
         }
