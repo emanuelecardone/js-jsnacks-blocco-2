@@ -75,8 +75,8 @@ sendButton.addEventListener('click', function(){
             // Do il messaggio finale di output
             document.querySelector('.result_box').innerHTML = `
             <span class="fs-6">
-            Hai digitato: <span class="fw-bolder">${numbersArray}</span>. La somma era arrivata a <span class="fw-bolder">${sum - errorNumber}</span>.<br>
-            Digitando <span class="fw-bolder">${errorNumber}</span>, la somma è arrivata a: <span class="fw-bolder">${sum}</span>.
+                Hai digitato: <span class="fw-bolder">${numbersArray}</span>. La somma era arrivata a <span class="fw-bolder">${sum - errorNumber}</span>.<br>
+                Digitando poi <span class="fw-bolder">${errorNumber}</span>, la somma è arrivata a <span class="fw-bolder">${sum}</span>.
             </span>
             `;
         } 

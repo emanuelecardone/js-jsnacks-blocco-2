@@ -51,7 +51,7 @@ showButton.addEventListener('click', function(){
 
     // Aggiungo lo slider in pagina e il wrapper della lista dei nomi creati
     mainWrapper.innerHTML = `
-    <div class="list_wrapper d-flex justify-content-between align-items-center bg-success rounded w-75 h-25 text-center">
+    <div class="list_wrapper d-flex justify-content-around align-items-center bg-success rounded w-75 h-25 text-center">
 
     </div>
     ` + `
