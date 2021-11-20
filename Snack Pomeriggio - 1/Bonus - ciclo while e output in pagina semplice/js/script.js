@@ -5,10 +5,9 @@
 
 
 // SOLUZIONE
-// Variabile del numero inserito (gli do stringa vuota di default per farlo entrare nel while)
-let userNumber = '';
-while(userNumber === ''){
-
+// Variabile del numero inserito 
+let userNumber;
+do{
     // Ricevo l'input dall'utente
     userNumber = prompt(`Inserisci un numero`);
 
@@ -34,7 +33,10 @@ while(userNumber === ''){
     } else{
         alert(`Hai annullato l'operazione`);
     }      
-}
+} while(userNumber === '') 
+
+
+    
 
 
  
