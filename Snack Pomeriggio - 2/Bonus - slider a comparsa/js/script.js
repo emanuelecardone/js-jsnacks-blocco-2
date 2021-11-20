@@ -43,6 +43,8 @@ for(let i = 0; i < firstNames.length; i++){
     `;
 }
 
+// SEZIONE CLICK PULSANTE COMPARSA
+
 // Inserisco il pulsante per la comparsa dello slider nel DOM, poi gli creo una variabile
 mainWrapper.innerHTML = `<button type="button" class="show_button btn btn-success p-5 fs-2 fw-bold">Mostra lista</button>`;  
 const showButton = document.querySelector('.show_button');
@@ -89,6 +91,8 @@ showButton.addEventListener('click', function(){
     const leftArrow = document.querySelector('.fa-arrow-alt-circle-left');
     const rightArrow = document.querySelector('.fa-arrow-alt-circle-right');
 
+    // SEZIONE CLICK ARROWS
+
     // Click left arrow
     leftArrow.addEventListener('click', function(){
         // Rimuovo l'active al nome attuale nello slider e nella lista in pagina
@@ -100,7 +104,6 @@ showButton.addEventListener('click', function(){
         } else{
             activeItem = titlesArray.length -1;
         }
-        
         // Aggiungo l'active agli elementi precedenti
         document.getElementsByClassName('names_title')[activeItem].classList.add('active');
         document.getElementsByClassName('list_span')[activeItem].classList.add('active');
@@ -117,7 +120,6 @@ showButton.addEventListener('click', function(){
         } else{
             activeItem = 0;
         }
-        
         // Aggiungo l'active agli elementi successivi
         document.getElementsByClassName('names_title')[activeItem].classList.add('active');
         document.getElementsByClassName('list_span')[activeItem].classList.add('active');
