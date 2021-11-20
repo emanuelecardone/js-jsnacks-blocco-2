@@ -62,8 +62,8 @@ numbersButton.addEventListener('click', function(){
         numbersListRow.innerHTML += `
         <div class="col">
             <div class="numbers_wrapper d-flex justify-content-around align-items-center">
-                <span class="text-primary text-center fs-3">
-                    <span class="fs-5">[${counter}]</span><br>${currentNumber}
+                <span class="text-primary text-center fs-3 fw-bold">
+                    <span class="fs-5 fw-normal">[${counter}]</span><br>${currentNumber}
                 </span>
             </div>
         </div>
