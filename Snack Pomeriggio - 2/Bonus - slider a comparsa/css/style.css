@@ -12,8 +12,7 @@ main{
 
 /* Caratteristiche di default e vari active */
 .list_span.active{
-    border : 3px solid white;
-    border-radius: 10px;
+    animation: active_borders .75s linear infinite;
 }
 .list_wrapper{
     display: none;
@@ -36,4 +35,16 @@ h2.active{
 }
 [class*="fa-arrow-alt-circle-"]{
     cursor: pointer;
+}
+
+@keyframes active_borders{
+    0%{
+        border-bottom : 3px solid white;
+    }
+    50%{
+        border-bottom : 6px solid white;
+    }
+    100%{
+        border-bottom : 3px solid white;
+    }
 }
