@@ -75,7 +75,7 @@ showButton.addEventListener('click', function(){
     for(let i = 0; i < firstNames.length; i++){
         const currentTitle = `<h2 class="text-white mb-0 names_title">${fakeList[i]}</h2>`;
         document.querySelector('.slider').innerHTML += currentTitle;
-        listWrapper.innerHTML += `<span class="text-white list_span">${fakeList[i]}</span>`;
+        listWrapper.innerHTML += `<span class="text-white list_span fs-5">${fakeList[i]}</span>`;
         titlesArray.push(currentTitle);
     }
 
