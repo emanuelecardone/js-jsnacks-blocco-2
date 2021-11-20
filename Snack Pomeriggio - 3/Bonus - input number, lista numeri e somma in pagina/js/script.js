@@ -40,7 +40,7 @@ const numbersArray = [];
 // Variabile per la somma
 let sum = 0;
 // Variabile per il contatore degli indici
-let counter = 0;
+let counter = 1;
 
 // Creo l'evento al click
 numbersButton.addEventListener('click', function(){
