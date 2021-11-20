@@ -14,7 +14,7 @@ const leftCol = `
 <div class="col">
     <div class="list_wrapper h-100 d-flex flex-column justify-content-center align-items-center">
         <h2>Lista dei numeri che inserisci</h2>
-        <div class="numbers_wrapper w-100 h-50 d-flex justify-content-center align-items-center border border-5 border-dark">
+        <div class="numbers_wrapper w-100 h-50 d-flex justify-content-center align-items-center">
         
         </div>
     </div>
@@ -33,7 +33,7 @@ const rightCol = `
 <div class="col">
     <div class="result_wrapper h-100 d-flex flex-column justify-content-center align-items-center">
         <h2>Risultato finale</h2>
-        <div class="result_box w-100 h-50 d-flex justify-content-center align-items-center border border-5 border-dark p-2"></div>
+        <div class="result_box w-100 h-50 d-flex justify-content-center align-items-center p-2"></div>
     </div>
 </div>
 `;
