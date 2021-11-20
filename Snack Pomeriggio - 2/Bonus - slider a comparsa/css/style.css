@@ -1,4 +1,5 @@
 /* COMMON */
+
 main{
     height: calc(100vh - 100px);
     gap: 30px;
@@ -10,16 +11,25 @@ main{
     width: 10%;
 }
 
-/* Caratteristiche di default e vari active */
+/* Freccette */
+[class*="fa-arrow-alt-circle-"]{
+    cursor: pointer;
+}
+
+/* SEZIONE ACTIVE */
+
+/* Span */
 .list_span.active{
     animation: active_borders .75s linear infinite;
 }
+/* Wrapper della lista */
 .list_wrapper{
     display: none;
 }
 .list_wrapper.active{
     display: block;
 }
+/* Wrapper dello slider */
 .slider_wrapper{
     gap: 20px;
     display: none;
@@ -27,6 +37,7 @@ main{
 .slider_wrapper.active{
     display: flex;
 }
+/* H2 nello slider */
 h2{
     display: none;
 }
@@ -34,9 +45,7 @@ h2.active{
     animation: appearing .25s linear 1;
     display: block;
 }
-[class*="fa-arrow-alt-circle-"]{
-    cursor: pointer;
-}
+
 
 /* ANIMAZIONE BORDI ACTIVE */
 @keyframes active_borders{
