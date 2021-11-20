@@ -7,6 +7,10 @@
 // SOLUZIONE
 // Variabile del numero inserito 
 let userNumber;
+
+// Uso il do-while per far si che l'utente abbia la possibilità di inserire il numero
+// almeno una volta anche se userNumber non è ancora definito
+// Se invia una stringa vuota, entra in gioco la condizione del while dal 2 giro in poi
 do{
     // Ricevo l'input dall'utente
     userNumber = prompt(`Inserisci un numero`);
@@ -21,19 +25,19 @@ do{
         if(userRealNumber % 2 === 0){
             document.querySelector('body').innerHTML = `
             <h2 class="text-dark text-center mt-5">${userRealNumber} è pari, quindi stampo ${userRealNumber}</h2>
-            `
+            `;
         }
         else{
             document.querySelector('body').innerHTML = `
             <h2 class="text-dark text-center mt-5">${userRealNumber} è dispari, quindi stampo ${userRealNumber + 1}</h2>
-            `
+            `;
         }
     } else if(userNumber === ''){
         alert(`Per favore inserisci un numero valido`);
     } else{
         alert(`Hai annullato l'operazione`);
     }      
-} while(userNumber === '') 
+} while(userNumber === ''); 
 
 
     
