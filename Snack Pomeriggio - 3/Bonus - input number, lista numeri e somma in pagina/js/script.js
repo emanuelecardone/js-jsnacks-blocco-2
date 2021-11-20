@@ -13,7 +13,7 @@ const mainTitle = `
     <span class="fs-4">Puoi inserire un massimo di 10 numeri</span>
 </h1>`;
 const formArea = `
-<div class="form_wrapper h-25 bg-light p-5 d-flex flex-column justify-content-center align-items-start rounded-pill">
+<div class="form_wrapper h_20 bg-light p-5 d-flex flex-column justify-content-center align-items-start rounded">
     <label for="number_form" class="form-label text-primary">Inserisci qui un numero</label>
     <input type="number" class="form-control mb-3 number_input" id="number_form">
     <button type="submit" class="btn btn-primary form_button">Invia</button>
