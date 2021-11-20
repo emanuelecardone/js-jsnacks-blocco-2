@@ -49,33 +49,41 @@ const showButton = document.querySelector('.show_button');
 // Apparizione slider al click
 showButton.addEventListener('click', function(){
 
-    // Aggiungo lo slider in pagina
+    // Aggiungo lo slider in pagina e il wrapper della lista dei nomi creati
     mainWrapper.innerHTML = `
+    <div class="list_wrapper d-flex justify-content-between align-items-center bg-success rounded w-50 h-25 text-center">
+
+    </div>
+    ` + `
     <div class="slider_wrapper justify-content-center align-items-center w-50 h-50">
         <i class="fas fa-arrow-alt-circle-left fs-1 text-success"></i>
         <div class="slider w-100 h-100 bg-success d-flex justify-content-center align-items-center rounded"></div>
         <i class="fas fa-arrow-alt-circle-right fs-1 text-success"></i>
     </div>
     `;
-    // Seleziono il wrapper appena creato
+    // Seleziono i wrappers appena creati
+    const listWrapper = document.querySelector('.list_wrapper');
     const sliderWrapper = document.querySelector('.slider_wrapper');
 
-    // Faccio apparire il wrapper con lo slider e il pulsante sparisce
+    // Faccio apparire i wrappers e il pulsante sparisce
+    listWrapper.classList.add('active');
     sliderWrapper.classList.add('active');
     showButton.classList.add('d-none');
     // Creo un array vuoto per gli h2
     const titlesArray = [];
-    // Popolo lo slider e l'array con la lista
+    // Popolo lo slider, la lista in pagina e l'array con la lista
     for(let i = 0; i < firstNames.length; i++){
         const currentTitle = `<h2 class="text-white mb-0 names_title">${fakeList[i]}</h2>`;
         document.querySelector('.slider').innerHTML += currentTitle;
+        listWrapper.innerHTML += `<span class="text-white list_span">${fakeList[i]}</span>`;
         titlesArray.push(currentTitle);
     }
 
     // Creo la variabile per l'item attivo (lo slider partirà dal primo elemento della fake list)
     let activeItem = 0;
-    // Do l'active al primo elemento
+    // Do l'active al primo elemento dello slider e della lista in pagina
     document.getElementsByClassName('names_title')[activeItem].classList.add('active');
+    document.getElementsByClassName('list_span')[activeItem].classList.add('active');
     
     // Variabili per le freccette aggiunte prima
     const leftArrow = document.querySelector('.fa-arrow-alt-circle-left');
@@ -83,8 +91,9 @@ showButton.addEventListener('click', function(){
 
     // Click left arrow
     leftArrow.addEventListener('click', function(){
-        // Rimuovo l'active al nome attuale
+        // Rimuovo l'active al nome attuale nello slider e nella lista in pagina
         document.getElementsByClassName('names_title')[activeItem].classList.remove('active');
+        document.getElementsByClassName('list_span')[activeItem].classList.remove('active');
         // Diminuisco di 1 il valore dell'active ma se è il primo elemento ripartirà dalla fine
         if(!(activeItem === 0)){
             activeItem--;    
@@ -92,14 +101,16 @@ showButton.addEventListener('click', function(){
             activeItem = titlesArray.length -1;
         }
         
-        // Aggiungo l'active all'elemento precedente
+        // Aggiungo l'active agli elementi precedenti
         document.getElementsByClassName('names_title')[activeItem].classList.add('active');
+        document.getElementsByClassName('list_span')[activeItem].classList.add('active');
     });
 
     // Click right arrow
     rightArrow.addEventListener('click', function(){
-        // Rimuovo l'active al nome attuale
+        // Rimuovo l'active al nome attuale nello slider e nella lista in pagina
         document.getElementsByClassName('names_title')[activeItem].classList.remove('active');
+        document.getElementsByClassName('list_span')[activeItem].classList.remove('active');
         // Diminuisco di 1 il valore dell'active ma se è il primo elemento ripartirà dalla fine
         if(!(activeItem === titlesArray.length - 1)){
             activeItem++;    
@@ -107,10 +118,10 @@ showButton.addEventListener('click', function(){
             activeItem = 0;
         }
         
-        // Aggiungo l'active all'elemento precedente
+        // Aggiungo l'active agli elementi successivi
         document.getElementsByClassName('names_title')[activeItem].classList.add('active');
+        document.getElementsByClassName('list_span')[activeItem].classList.add('active');
     });
-    console.log(...titlesArray);
 });
 
 

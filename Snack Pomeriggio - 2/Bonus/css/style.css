@@ -1,9 +1,25 @@
+/* COMMON */
+main{
+    height: calc(100vh - 100px);
+    gap: 30px;
+}
+
+/* Modifica row-cols */
 .row-cols-10 > .col{
     flex: 0 0 auto;
     width: 10%;
 }
-main{
-    height: calc(100vh - 100px);
+
+/* Caratteristiche di default e vari active */
+.list_span.active{
+    border : 3px solid white;
+    border-radius: 10px;
+}
+.list_wrapper{
+    display: none;
+}
+.list_wrapper.active{
+    display: block;
 }
 .slider_wrapper{
     gap: 20px;
