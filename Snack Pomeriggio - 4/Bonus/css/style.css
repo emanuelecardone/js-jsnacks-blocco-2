@@ -1,0 +1,6 @@
+.btn:focus{
+    box-shadow: none;
+}
+.numbers_wrapper{
+    gap: 2%;
+}
