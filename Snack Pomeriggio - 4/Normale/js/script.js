@@ -34,6 +34,7 @@ while(sum < 50){
     } 
 }
 
+// Output finale
 alert(`
 Prima che la somma fosse >= 50, hai digitato questi numeri: ${numbersArray}
 
