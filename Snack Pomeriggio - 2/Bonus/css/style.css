@@ -1,0 +1,23 @@
+.row-cols-10 > .col{
+    flex: 0 0 auto;
+    width: 10%;
+}
+main{
+    height: calc(100vh - 100px);
+}
+.slider_wrapper{
+    gap: 20px;
+    display: none;
+}
+.slider_wrapper.active{
+    display: flex;
+}
+h2{
+    display: none;
+}
+h2.active{
+    display: block;
+}
+[class*="fa-arrow-alt-circle-"]{
+    cursor: pointer;
+}

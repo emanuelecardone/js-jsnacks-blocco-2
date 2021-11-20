@@ -13,11 +13,14 @@ const lastNames = ['Battisti', 'Innocenzi', 'Manfrinetti', 'Kourtis', 'Zecchiaro
 const fakeList = [];
 
 for(let i = 0; i < firstNames.length; i++){
+    // Seleziono in modo casuale un elemento di entrambe le liste
     const firstNameForList = firstNames[Math.floor(Math.random() * firstNames.length - 1 + 1) + 0];
     const lastNameForList = lastNames[Math.floor(Math.random() * lastNames.length - 1 + 1) + 0];
+    // Aggiungo il nome random e cognome random alla lista
     fakeList.push(firstNameForList + ' ' +lastNameForList);
 }
 
+// Output
 alert(`Questi erano i nomi: ${firstNames}
 
 Questi erano i cognomi: ${lastNames}
