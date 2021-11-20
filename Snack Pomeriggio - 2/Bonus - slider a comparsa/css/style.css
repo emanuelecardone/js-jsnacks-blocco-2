@@ -31,12 +31,14 @@ h2{
     display: none;
 }
 h2.active{
+    animation: appearing .25s linear 1;
     display: block;
 }
 [class*="fa-arrow-alt-circle-"]{
     cursor: pointer;
 }
 
+/* ANIMAZIONE BORDI ACTIVE */
 @keyframes active_borders{
     0%{
         border-bottom : 3px solid white;
@@ -46,5 +48,14 @@ h2.active{
     }
     100%{
         border-bottom : 3px solid white;
+    }
+}
+/* ANIMAZIONE H2 ACTIVE */
+@keyframes appearing{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
